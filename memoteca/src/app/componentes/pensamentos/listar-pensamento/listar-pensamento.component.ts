@@ -8,11 +8,13 @@ import { Component } from '@angular/core';
 export class ListarPensamentoComponent {
   listaPensamentos = [
     {
-      conteudo: 'Hoje queria poder descansar mais',
+      id: 1,
+      conteudo: 'Hoje queria poder descansar mais ',
       autoria: 'Sérgio Medeiros',
       modelo: 'modelo3'
     },
     {
+      id: 2,
       conteudo: 'Hoje estou aprendendo muito do angular',
       autoria: 'Sérgio Medeiros',
       modelo: 'modelo1'
