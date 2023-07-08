@@ -27,6 +27,13 @@
   color: #154580;
   font-weight: bold;
   margin: 0 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.editar-pensamentos form label img {
+  width: 1.3rem;
+  margin-left: 0.4rem;
 }
 
 .editar-pensamentos form .input {
