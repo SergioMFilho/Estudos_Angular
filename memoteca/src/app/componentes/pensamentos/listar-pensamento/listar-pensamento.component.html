@@ -3,7 +3,6 @@
     <h2 class="ff-inter">Meu Mural</h2>
     <button routerLink="/criarPensamento" class="botao">Adicionar Pensamento</button>
   </header>
-  <app-editar-pensamento></app-editar-pensamento>
     <div class="mural" *ngIf="listaPensamentos, else semPensamentos">
       <div *ngFor="let pensamento of listaPensamentos">
         <app-pensamento [pensamento]="pensamento"></app-pensamento>

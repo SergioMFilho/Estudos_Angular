@@ -20,8 +20,8 @@
         Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
-          <p class="conteudo"></p>
-          <p class="autoria"><b></b></p>
+          <p class="conteudo">{{ this.pensamento.conteudo }}</p>
+          <p class="autoria"><b>{{ this.pensamento.autoria }}</b></p>
         </div>
       </div>
       <div class="radio-modelo">
@@ -35,8 +35,8 @@
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azuis">
-          <p class="conteudo"></p>
-          <p class="autoria"><b></b></p>
+          <p class="conteudo">{{ this.pensamento.conteudo }}</p>
+          <p class="autoria"><b>{{ this.pensamento.autoria }}</b></p>
         </div>
       </div>
       <div class="radio-modelo">
@@ -50,10 +50,14 @@
         Prévia:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo3.png" alt="Aspas azuis">
-          <p class="conteudo"></p>
-          <p class="autoria"><b></b></p>
+          <p class="conteudo">{{ this.pensamento.conteudo }}</p>
+          <p class="autoria"><b>{{ this.pensamento.autoria }}</b></p>
         </div>
       </div>
+    </div>
+    <div class="acoes">
+      <button class="botao" >Excluir</button>
+      <button class="botao" >Cancelar</button>
     </div>
   </form>
 </section>
