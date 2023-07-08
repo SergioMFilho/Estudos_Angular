@@ -34,6 +34,22 @@
 .editar-pensamentos form label img {
   width: 1.3rem;
   margin-left: 0.4rem;
+  cursor: pointer;
+}
+
+.label_editar_modelo span {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 3px solid #154580;
+  width: fit-content;
+  height: fit-content;
+  -webkit-box-shadow: 3px 7px 32px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 7px 32px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 7px 32px 0px rgba(0, 0, 0, 0.75)
 }
 
 .editar-pensamentos form .input {

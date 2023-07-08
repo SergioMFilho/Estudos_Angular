@@ -14,7 +14,8 @@ export class EditarPensamentoComponent implements OnInit {
     id: 0,
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: '',
+    dataCriacao: null
   }
 
   constructor(
@@ -41,4 +42,6 @@ export class EditarPensamentoComponent implements OnInit {
     cancelarEditar() {
       this.router.navigate(['/listarPensamento'])
     }
+
+    public mostrarTexto: boolean = false;
 }

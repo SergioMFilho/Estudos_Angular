@@ -2,6 +2,7 @@
   <img src="/assets/imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">
   <p class="conteudo">{{ pensamento.conteudo }}</p>
   <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
+  <p class="autoria">{{ pensamento.dataCriacao }}</p>
   <div class="acoes">
     <button class="botao-editar" routerLink="/pensamentos/editarPensamento/{{ pensamento.id}}">
       <img src="/assets/imagens/icone-editar.png" alt="Icone de editar">
