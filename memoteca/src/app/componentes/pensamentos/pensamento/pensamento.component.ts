@@ -12,7 +12,7 @@ export class PensamentoComponent {
     conteudo: 'I love angular',
     autoria: 'Nay',
     modelo: 'modelo3',
-    dataCriacao: new Date(2023, 3, 11)
+    dataCriacao: null
   }
 
   larguraPensamento(): string {

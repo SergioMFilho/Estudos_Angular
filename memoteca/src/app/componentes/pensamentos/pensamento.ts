@@ -3,5 +3,5 @@ export interface Pensamento {
   conteudo: string
   autoria: string
   modelo: string
-  dataCriacao: Date
+  dataCriacao?: string | null
 }

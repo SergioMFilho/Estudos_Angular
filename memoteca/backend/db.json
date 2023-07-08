@@ -21,9 +21,16 @@
     {
       "conteudo": "ESSE É NOVO",
       "autoria": "ewdewdewd",
-      "modelo": "modelo1",
+      "modelo": "modelo3",
       "dataCriacao": "2023-07-08T19:01:16.804Z",
       "id": 7
+    },
+    {
+      "conteudo": "Novo pensamento",
+      "autoria": "ewdewdwedwe",
+      "modelo": "modelo2",
+      "dataCriacao": "08/07/2023",
+      "id": 8
     }
   ]
 }

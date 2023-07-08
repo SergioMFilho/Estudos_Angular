@@ -15,7 +15,7 @@ export class EditarPensamentoComponent implements OnInit {
     conteudo: '',
     autoria: '',
     modelo: '',
-    dataCriacao: new Date()
+    dataCriacao: null
   }
 
   constructor(

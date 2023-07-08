@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PensamentoService } from '../pensamento.service';
 import { Router } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -12,12 +13,13 @@ export class CriarPensamentoComponent {
     conteudo: "",
     autoria: '',
     modelo: '',
-    dataCriacao: new Date()
+    dataCriacao: this.datePipe.transform(new Date(), 'dd/MM/yyyy') || null
   }
 
   constructor(
     private service: PensamentoService,
     private router: Router,
+    private datePipe: DatePipe
   ) { }
 
   criarPensamento() {
