@@ -1,15 +1,15 @@
 {
   "pensamentos": [
     {
-      "conteudo": "Pnesamento editado 4.0",
-      "autoria": "Autor editante 4.0",
-      "modelo": "modelo2",
+      "conteudo": "Pnesamento editado 6.0",
+      "autoria": "Autor editante 6.0",
+      "modelo": "modelo3",
       "id": 4
     },
     {
-      "conteudo": "Pensamento editado agora",
-      "autoria": "Sergito",
-      "modelo": "modelo3",
+      "conteudo": "Pensamento editado agoraswqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqwsqswqswqwswsqwsqqwswsws wqs qws wqsqwsqw sqwsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+      "autoria": "ewdwedwedew",
+      "modelo": "modelo2",
       "id": 5
     },
     {
@@ -17,12 +17,6 @@
       "autoria": "Autor editante 2.0",
       "modelo": "modelo1",
       "id": 6
-    },
-    {
-      "conteudo": "Hoje o dia foi estressante",
-      "autoria": "Sérgio",
-      "modelo": "modelo2",
-      "id": 8
     }
   ]
 }

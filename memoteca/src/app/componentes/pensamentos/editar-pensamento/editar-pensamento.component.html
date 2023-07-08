@@ -8,7 +8,7 @@
     <label for="autoria">Autoria ou fonte</label>
     <input type="textarea" class="input" id="autoria" name="autoria" placeholder="Digite a autoria ou fonte" [(ngModel)]="pensamento.autoria">
     <label for="modelo" class="label_editar_modelo">Selecione o modelo do card <img src="../../../../assets/imagens/atencao.png" alt="Icone de Informação" (mouseenter)="mostrarTexto = true" (mouseout)="mostrarTexto = false">
-      <span *ngIf="mostrarTexto">O modelo atualmente em uso é automaticamente selecionado ao entrar na tela de edição do pensamento. Caso você não deseje mudar o modelo, não é necessário selecionar outra opção.</span>
+      <span *ngIf="mostrarTexto">O modelo atualmente em uso é automaticamente selecionado ao entrar na tela de edição do pensamento. Caso você não deseje editar o modelo do card, não é necessário selecionar outra opção.</span>
     </label>
     <div class="container-radio">
       <div class="radio-modelo">
