@@ -28,7 +28,17 @@ export class EditarPensamentoComponent implements OnInit {
       this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
         this.pensamento = pensamento;
       })
+    }
 
-      
+    editarPensamento() {
+      if(this.pensamento.id) {
+        this.service.editar(this.pensamento.id, this.pensamento).subscribe(() => {
+          this.router.navigate(['/listarPensamento'])
+        })
+      }
+    }
+
+    cancelarEditar() {
+      this.router.navigate(['/listarPensamento'])
     }
 }
