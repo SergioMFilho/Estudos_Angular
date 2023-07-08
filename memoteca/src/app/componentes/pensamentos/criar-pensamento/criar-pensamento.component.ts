@@ -8,25 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./criar-pensamento.component.css']
 })
 export class CriarPensamentoComponent {
-
   pensamento = {
     conteudo: "",
     autoria: '',
-    modelo: ''
+    modelo: '',
+    dataCriacao: new Date()
   }
+
   constructor(
     private service: PensamentoService,
-    private router: Router
-    ){}
+    private router: Router,
+  ) { }
 
-
-  criarPensamento () {
+  criarPensamento() {
     this.service.criar(this.pensamento).subscribe(() => {
       this.router.navigate(['/listarPensamento'])
     })
   }
 
-  cancelarCriacao () {
+  cancelarCriacao() {
     this.router.navigate(['/listarPensamento'])
   }
 

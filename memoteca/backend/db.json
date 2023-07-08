@@ -3,7 +3,7 @@
     {
       "conteudo": "Pnesamento editado 6.0",
       "autoria": "Autor editante 6.0",
-      "modelo": "modelo3",
+      "modelo": "modelo2",
       "id": 4
     },
     {
@@ -15,8 +15,15 @@
     {
       "conteudo": "Pensamento Editado 2.0",
       "autoria": "Autor editante 2.0",
-      "modelo": "modelo1",
+      "modelo": "modelo2",
       "id": 6
+    },
+    {
+      "conteudo": "ESSE É NOVO",
+      "autoria": "ewdewdewd",
+      "modelo": "modelo1",
+      "dataCriacao": "2023-07-08T19:01:16.804Z",
+      "id": 7
     }
   ]
 }

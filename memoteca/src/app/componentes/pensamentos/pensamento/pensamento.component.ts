@@ -11,7 +11,8 @@ export class PensamentoComponent {
     id: 1,
     conteudo: 'I love angular',
     autoria: 'Nay',
-    modelo: 'modelo3'
+    modelo: 'modelo3',
+    dataCriacao: new Date(2023, 3, 11)
   }
 
   larguraPensamento(): string {
