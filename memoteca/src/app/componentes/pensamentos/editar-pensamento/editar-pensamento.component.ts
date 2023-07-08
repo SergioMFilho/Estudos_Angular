@@ -41,4 +41,6 @@ export class EditarPensamentoComponent implements OnInit {
     cancelarEditar() {
       this.router.navigate(['/listarPensamento'])
     }
+
+    public mostrarTexto: boolean = false;
 }
