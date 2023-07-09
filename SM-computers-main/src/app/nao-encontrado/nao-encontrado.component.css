@@ -1,0 +1,17 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 21rem;
+}
+.container i {
+    font-size: 6rem;
+    color: #005486;
+}
+
+.container h2 {
+    font-size: 3rem;
+}

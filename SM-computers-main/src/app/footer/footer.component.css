@@ -1,0 +1,60 @@
+.footer_container {
+    background-color: #EEEDEF;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.tituloFooter {
+    font-size: 22px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #005486;
+    line-height: 50px;
+}
+
+.footer {
+    font-size: 18px;
+}
+
+.footer_about-text {
+    text-align: justify;
+}
+
+.section_about {
+    width: 400px;
+}
+
+.list_item {
+    line-height: 30px;
+}
+
+.fa-solid {
+    margin-right: 10px;
+}
+
+.footer_copyright {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* .footer__copyright {
+    text-align: center;
+    margin-top: 20px;
+    background-color: var(--light-gray-2);    
+    font-weight: bold;
+    padding: 20px;
+    color: var(--gray);
+}
+
+
+
+
+.footer i {
+    color: var(--orange);
+}
+
+.footer li {
+    margin: 10px 0;
+} */ 

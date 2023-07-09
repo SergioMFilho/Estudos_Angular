@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PensamentoService } from '../pensamento.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Pensamento } from '../pensamento';
+import {MatTooltipModule} from  '@angular/material/tooltip' ;
+import {MatButtonModule} from  '@angular/material/button' ;
 
 @Component({
   selector: 'app-editar-pensamento',
