@@ -38,11 +38,24 @@
     justify-content: center;
 }
 
+.footer_title {
+  color: #005486;
+  font-size:40px;
+  display: flex;
+  align-items: center;
+}
+
+.footer_title--orange {
+  color: var(--orange);
+  color: orange;
+  font-size:40px;
+}
+
 
 /* .footer__copyright {
     text-align: center;
     margin-top: 20px;
-    background-color: var(--light-gray-2);    
+    background-color: var(--light-gray-2);
     font-weight: bold;
     padding: 20px;
     color: var(--gray);
@@ -57,4 +70,4 @@
 
 .footer li {
     margin: 10px 0;
-} */ 
+} */
