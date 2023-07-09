@@ -1,15 +1,17 @@
-.main-header {    
+
+.main-header {
     padding: 10px 0px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     column-gap: 40px;
+    padding-bottom: 3rem;
 }
 
-.main-header__title {    
+.main-header__title {
     font-size: 80px;
-    letter-spacing: -1.5px;    
+    letter-spacing: -1.5px;
 }
 
 .main-header__title--blue {
@@ -54,8 +56,74 @@
 
 .badge-carrinho {
     background-color: var(--dark-blue);
-    padding: 5px 10px;    
+    padding: 5px 10px;
     border-radius: 4px;
 }
 
 
+.promocao_app {
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  background-color: #005486;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.promocao_app header {
+  display: flex;
+}
+
+
+.frase_oferta_dia {
+  margin-right: 1rem;
+}
+
+.frase_oferta_dia p{
+  font-size: 1.4rem;
+}
+
+.time {
+  font-size: 1.8rem;
+}
+
+.texto_time span{
+  margin: 0px 0.8rem 0px 0.8rem;
+}
+
+.container_promocao_dia {
+  width: 60%;
+  height: 520px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.container_oferta{
+  display: flex;
+  justify-content: center;
+}
+
+.produto_em_promocao {
+  padding: 20px;
+}
+
+.product-item_name {
+  font-size: 24px;
+  color: #005486;
+  text-align: center;
+}
+
+.valor_normal {
+  text-decoration: line-through;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.valor_promocao {
+  color: orange;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}

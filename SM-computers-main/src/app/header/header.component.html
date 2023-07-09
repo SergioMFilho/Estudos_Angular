@@ -6,19 +6,42 @@
         <nav class="main-header__menu">
             <ul>
                 <li> <a href="">Produtos</a> </li>
-                <li> 
-                    <a routerLink="carrinho">  
+                <li>
+                    <a routerLink="carrinho">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        Carrinho 
+                        Carrinho
                         <span class="badge-carrinho">{{ carrinhoService.obtemCarrinho().length }}</span>
                     </a>
                 </li>
                 <li> <a routerLink="contato"> Contato</a> </li>
                 <li> <a href=""> <i class="fa-brands fa-linkedin-in"> </i> </a>
                 <li> <a href=""> <i class="fa-brands fa-github"></i> </a>
-                <li> <a href=""> <i class="fa-brands fa-instagram"> </i></a></li>    
+                <li> <a href=""> <i class="fa-brands fa-instagram"> </i></a></li>
             </ul>
         </nav>
         <app-barra-pesquisa></app-barra-pesquisa>
     </div>
 </header>
+<div class="container_promocao_dia">
+  <div class="promocao_app">
+    <header>
+      <div class="frase_oferta_dia">
+        <p>OFERTA DO DIA</p>
+        <span>Aproveite! Essa oferta acaba em:</span>
+      </div>
+      <div>
+        <p class="time">{{ tempoRestante.horas }} : {{ tempoRestante.minutos }} : {{ tempoRestante.segundos }} </p>
+        <p class="texto_time"><span>hrs</span><span>min</span><span>ss</span></p>
+      </div>
+    </header>
+  </div>
+  <div class="container_oferta">
+    <img class="produto_em_promocao" src="../../assets/kit-gamer.jpg" alt="" style="width: 400px;">
+  </div>
+  <div>
+    <h2 class="product-item_name">Kit Gamer (teclado, mouse, controle e headset)</h2>
+    <p class="valor_normal"> R$1000.00</p>
+    <p class="valor_promocao"> R$600.00</p>
+  </div>
+</div>
+
