@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { BarraPesquisaComponent } from './barra-pesquisa/barra-pesquisa.component';
+import { MaterialModule } from './material/material.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatSliderModule,
     MatSnackBarModule,
+    MaterialModule,
     FormsModule
   ],
   providers: [],

@@ -13,6 +13,7 @@
     border: none;
     transition: all -3s ease-in-out;
     font-size: 22px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .search-form input:focus {
@@ -26,6 +27,7 @@
     border:none;
     color: #fff;
     font-size: 22px;
+    border-radius: 0px 5px 5px 0px;
 }
 
 #iconSearch {
