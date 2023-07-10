@@ -25,7 +25,6 @@ export class CarrinhoService {
     localStorage.setItem("carrinho", JSON.stringify(this.itens));
   }
 
-
   limparCarrinho() {
     this.itens = [];
     localStorage.clear();
