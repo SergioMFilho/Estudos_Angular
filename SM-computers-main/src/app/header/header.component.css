@@ -78,14 +78,24 @@
 
 .frase_oferta_dia {
   margin-right: 1rem;
+  border-radius: 10px 10px 0 0;
 }
 
 .frase_oferta_dia p{
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+}
+
+.oferta_do_dia {
+  font-size: 1.7rem;
 }
 
 .time {
   font-size: 1.8rem;
+  margin: 0 0 0;
+}
+
+.textmo time {
+  margin: 0 0 0;
 }
 
 .texto_time span{
@@ -93,10 +103,12 @@
 }
 
 .container_promocao_dia {
+  position: relative;
   width: 60%;
   height: 520px;
   margin: 0 auto;
-  border: 1px solid black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0 0 10px 10px;
 }
 
 .container_oferta{
@@ -116,7 +128,7 @@
 
 .valor_normal {
   text-decoration: line-through;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
 }
@@ -126,4 +138,28 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+}
+
+.remove-margin-bottom {
+  margin-bottom: 0;
+}
+
+.cronometro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: -15px;
+  right: -19px;
+  padding: 10px 16px;
+  font-size: 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
 }

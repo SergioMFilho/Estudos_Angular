@@ -22,26 +22,33 @@
         <app-barra-pesquisa></app-barra-pesquisa>
     </div>
 </header>
-<div class="container_promocao_dia">
+<div class="container_promocao_dia" *ngIf="divPromocao">
+  <button class="close-button" (click)="excluirPromocaoDiaria()">X</button>
   <div class="promocao_app">
     <header>
       <div class="frase_oferta_dia">
-        <p>OFERTA DO DIA</p>
+        <div>
+          <span class="oferta_do_dia">OFERTA DO DIA</span>
+        </div>
         <span>Aproveite! Essa oferta acaba em:</span>
       </div>
-      <div>
+      <div class="cronometro">
         <p class="time">{{ tempoRestante.horas }} : {{ tempoRestante.minutos }} : {{ tempoRestante.segundos }} </p>
-        <p class="texto_time"><span>hrs</span><span>min</span><span>ss</span></p>
+        <p class="texto_time remove-margin-bottom" style="margin: 0;"><span>hrs</span><span>min</span><span>ss</span></p>
       </div>
     </header>
   </div>
   <div class="container_oferta">
-    <img class="produto_em_promocao" src="../../assets/kit-gamer.jpg" alt="" style="width: 400px;">
+    <img class="produto_em_promocao" src="../../assets/kit-gamer.jpg" alt="" style="width: 27rem;">
   </div>
   <div>
     <h2 class="product-item_name">Kit Gamer (teclado, mouse, controle e headset)</h2>
-    <p class="valor_normal"> R$1000.00</p>
-    <p class="valor_promocao"> R$600.00</p>
+    <div>
+      <p class="valor_normal"> R$1000.00</p>
+    </div>
+    <div>
+      <p class="valor_promocao"> R$600.00</p>
+    </div>
   </div>
 </div>
 

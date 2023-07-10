@@ -10,6 +10,7 @@ import { DatePipe } from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   tempoRestante: any;
+  divPromocao: boolean = true;
 
   constructor(
     public carrinhoService: CarrinhoService,
@@ -18,6 +19,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.calculaTempoRestante();
+    this.divPromocao = JSON.parse(sessionStorage.getItem('divPromocao') || 'true')
   }
 
   calculaTempoRestante() {
@@ -39,4 +41,11 @@ export class HeaderComponent implements OnInit {
       this.calculaTempoRestante();
     }, 1000);
   }
+
+  excluirPromocaoDiaria () {
+    this.divPromocao = false;
+    sessionStorage.setItem('divPromocao', JSON.stringify(this.divPromocao))
+  }
+
+
 }
