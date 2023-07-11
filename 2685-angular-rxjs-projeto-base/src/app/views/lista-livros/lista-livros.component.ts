@@ -23,8 +23,7 @@ export class ListaLivrosComponent implements OnDestroy {
       next: items => {
         this.listaLivros = this.livrosResultadoParaLivros(items)
       },
-      error: erro => console.error(erro),
-      complete: () => console.log('Observable Completado')
+      error: erro => console.error(erro)
     })
   }
 
@@ -37,8 +36,8 @@ export class ListaLivrosComponent implements OnDestroy {
         publisher:           item.volumeInfo?.publisher,
         publishedDate:       item.volumeInfo?.publishedDate,
         description:         item.volumeInfo?.description,
-        previewLink:        item.volumeInfo?.previewLink
-        // thumbnail:          item.volumeInfo?.ImageLinks.thumbnail
+        previewLink:        item.volumeInfo?.previewLink,
+        thumbnail:          item.volumeInfo?.imageLinks?.thumbnail
       })
     })
     return livros
