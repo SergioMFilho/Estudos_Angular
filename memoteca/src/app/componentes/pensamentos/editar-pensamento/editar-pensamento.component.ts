@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PensamentoService } from '../pensamento.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pensamento } from '../pensamento';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatButtonModule } from '@angular/material/button';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -23,21 +20,23 @@ export class EditarPensamentoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id')
+    this.formulario = this.formBuilder.group({
+      id: [''],
+      conteudo: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+      autoria: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(3)
+      ])],
+      modelo: ['']
+    });
+
+    const id = this.route.snapshot.paramMap.get('id');
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
-      this.formulario = this.formBuilder.group({
-        id: [pensamento.id],
-        conteudo: [pensamento.conteudo, Validators.compose([
-          Validators.required,
-          Validators.pattern(/(.|\s)*\S(.|\s)*/)
-        ])],
-        autoria: [pensamento.autoria, Validators.compose([
-          Validators.required,
-          Validators.minLength(3)
-        ])],
-        modelo: [pensamento.modelo]
-      })
-    })
+      this.formulario.patchValue(pensamento);
+    });
   }
 
   editarPensamento() {

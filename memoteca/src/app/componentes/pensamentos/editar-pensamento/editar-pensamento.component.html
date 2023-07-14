@@ -4,15 +4,10 @@
   </header>
   <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
-    <input
-    type="text"
-    class="input"
-    id="pensamento"
-    formControlName="conteudo"
-    placeholder="Digite o pensamento"
-  >
+    <input type="text" class="input" id="pensamento" formControlName="conteudo" placeholder="Digite o pensamento">
     <label for="autoria">Autoria ou fonte</label>
-    <input type="textarea" class="input" id="autoria" formControlName="autoria" placeholder="Digite a autoria ou fonte">
+
+    <input type="text" class="input" id="autoria" formControlName="autoria" placeholder="Digite a autoria ou fonte">
     <div class="container-radio">
       <div class="radio-modelo">
         <label for="modelo1">
