@@ -8,6 +8,7 @@
   height: 10vh;
   background-color: #040405;
   color: #fff;
+  border-bottom: 1px solid #ff0000bf;
   .container_header {
     display: flex;
     width: 80%;
@@ -15,16 +16,16 @@
     align-items: center;
     margin: 0 10%;
     .my_name {
-     font-size: 22px;
+     font-size: 1.3rem;
     }
     .lista_navegacao {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
       list-style: none;
-      width: 500px;
+      width: 40vw;
       li {
-        font-size: 15px;
+        font-size: 1rem;
         font-weight: 700;
         letter-spacing: 2px;
         a{
