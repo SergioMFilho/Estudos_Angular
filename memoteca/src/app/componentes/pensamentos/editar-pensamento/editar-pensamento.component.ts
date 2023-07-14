@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PensamentoService } from '../pensamento.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pensamento } from '../pensamento';
-import {MatTooltipModule} from  '@angular/material/tooltip' ;
-import {MatButtonModule} from  '@angular/material/button' ;
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { minusculoValidator } from '../criar-pensamento/minusculoValidators';
 
 @Component({
   selector: 'app-editar-pensamento',
@@ -12,38 +11,52 @@ import {MatButtonModule} from  '@angular/material/button' ;
 })
 export class EditarPensamentoComponent implements OnInit {
 
-  pensamento : Pensamento = {
-    id: 0,
-    conteudo: '',
-    autoria: '',
-    modelo: '',
-    dataCriacao: null
-  }
+  formulario!: FormGroup
 
   constructor(
     private service: PensamentoService,
     private router: Router,
-    private route: ActivatedRoute
-    ) {}
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder
+  ) { }
 
-    ngOnInit(): void {
-      const id = this.route.snapshot.paramMap.get('id')
-      this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
-        this.pensamento = pensamento;
-      })
-    }
+  ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      id: [''],
+      conteudo: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+      autoria: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(3),
+        minusculoValidator
+      ])],
+      modelo: ['']
+    });
 
-    editarPensamento() {
-      if(this.pensamento.id) {
-        this.service.editar(this.pensamento.id, this.pensamento).subscribe(() => {
-          this.router.navigate(['/listarPensamento'])
-        })
-      }
-    }
+    const id = this.route.snapshot.paramMap.get('id');
+    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+      this.formulario.patchValue(pensamento);
+    });
+  }
 
-    cancelarEditar() {
+  editarPensamento() {
+    this.service.editar(this.formulario.value).subscribe(() => {
       this.router.navigate(['/listarPensamento'])
-    }
+    })
+  }
 
-    public mostrarTexto: boolean = false;
+  cancelar() {
+    this.router.navigate(['/listarPensamento'])
+  }
+
+  habilitarBotao(): string {
+    if(!this.formulario.valid) {
+      return 'botao__desabilitado'
+    } else {
+      return 'botao'
+    }
+  }
+
 }
