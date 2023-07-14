@@ -1,0 +1,97 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #06090F;
+
+  .apresentacao {
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    background-color: #06090F;
+    color: #fff;
+    padding-left: auto;
+    // padding-right: 5rem;
+
+    .apresentacao_h1 .my_job::after {
+      content: "";
+      width: 3px;
+      height: 30px;
+      background-color: #FF0000;
+      display: inline-block;
+    }
+
+    .apresentacao_h1 .my_job {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .my_name {
+      font-size: 3.5rem;
+      font-weight: 500;
+      span {
+        color: #FF0000;
+        font-size: 3rem;
+      }
+    }
+
+    .div_botao_github{
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      cursor: pointer;
+
+      button {
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: 700;
+        border: 1px solid red;
+        border-radius: 10px;
+        color: #fff;
+        background: linear-gradient(89.16deg,#06090F -7.21%,red 148.5%);
+        cursor: pointer;
+        transition: filter 3s all;
+
+        &:hover {
+          filter: brightness(0.8)
+        }
+      }
+
+      .devicon-github-original {
+        font-size: 48px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .my_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 100vh;
+    background-color: #06090F;
+    padding-left: auto;
+
+    img {
+      width: 350px;
+      border: 2px solid red;
+      border-radius: 50%;
+      transition: 1s all;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+}
+
+
+
+
