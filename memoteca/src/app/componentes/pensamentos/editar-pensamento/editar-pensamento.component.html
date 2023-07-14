@@ -5,9 +5,20 @@
   <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
     <input type="text" class="input" id="pensamento" formControlName="conteudo" placeholder="Digite o pensamento">
+    <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors?.['required']" >
+      Pensamento é obrigatório!
+    </div>
     <label for="autoria">Autoria ou fonte</label>
-
     <input type="text" class="input" id="autoria" formControlName="autoria" placeholder="Digite a autoria ou fonte">
+    <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['required']" >
+      Autoria é obrigatória!
+    </div>
+    <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['minlength']">
+      Autoria deve conter no mínimo 3 digitos!
+    </div>
+    <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['minusculo'] && !formulario.get('autoria')?.errors?.['required']">
+      O campo só aceita letras maiúsculas
+    </div>
     <div class="container-radio">
       <div class="radio-modelo">
         <label for="modelo1">
@@ -56,8 +67,8 @@
       </div>
     </div>
     <div class="acoes">
-      <button class="botao" (click)="editarPensamento()">Editar</button>
-      <button class="botao" (click)="cancelar()">Cancelar</button>
+      <button [disabled]="!formulario.valid" [ngClass]="habilitarBotao()" (click)="editarPensamento()">Salvar</button>
+      <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>
   </form>
 </section>

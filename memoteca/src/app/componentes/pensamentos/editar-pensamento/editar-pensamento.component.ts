@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PensamentoService } from '../pensamento.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { minusculoValidator } from '../criar-pensamento/minusculoValidators';
 
 @Component({
   selector: 'app-editar-pensamento',
@@ -28,7 +29,8 @@ export class EditarPensamentoComponent implements OnInit {
       ])],
       autoria: ['', Validators.compose([
         Validators.required,
-        Validators.minLength(3)
+        Validators.minLength(3),
+        minusculoValidator
       ])],
       modelo: ['']
     });
@@ -50,10 +52,11 @@ export class EditarPensamentoComponent implements OnInit {
   }
 
   habilitarBotao(): string {
-    if(this.formulario.valid) {
-      return "botao"
+    if(!this.formulario.valid) {
+      return 'botao__desabilitado'
+    } else {
+      return 'botao'
     }
-    else return "botao__desabilitado"
   }
 
 }
