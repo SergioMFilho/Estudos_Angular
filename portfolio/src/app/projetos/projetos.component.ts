@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./projetos.component.scss']
 })
 export class ProjetosComponent {
-  projetos = [
-    {imagem: ''}
-  ]
+
 }
