@@ -57,7 +57,6 @@
     background-color: #06090F;
     color: #fff;
     padding-left: auto;
-    // padding-right: 5rem;
 
     img {
       width: 128px;
@@ -65,5 +64,36 @@
       border-radius: 50%;
       background-color: #121214;
     }
+
 }
 
+.icones {
+  width: 10rem;
+}
+
+.img_tecnologias{
+  margin-top: 3rem;
+}
+
+.container_img {
+  position: relative;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+img {
+  animation: rotate 0.5s infinite;
+  animation-direction:alternate;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}

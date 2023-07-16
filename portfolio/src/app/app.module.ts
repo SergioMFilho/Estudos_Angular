@@ -14,7 +14,7 @@ import { ProjetosComponent } from './projetos/projetos.component';
     HeaderComponent,
     HomeComponent,
     TecnologiasComponent,
-    ProjetosComponent
+    ProjetosComponent,
   ],
   imports: [
     BrowserModule,
