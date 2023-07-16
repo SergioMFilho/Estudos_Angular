@@ -13,18 +13,6 @@
       "modelo": "modelo1",
       "dataCriacao": "09/07/2023",
       "id": 9
-    },
-    {
-      "id": 10,
-      "conteudo": "Hoje aprendi sobre AbstractControl",
-      "autoria": "angular",
-      "modelo": "modelo2"
-    },
-    {
-      "conteudo": "pensamento novo",
-      "autoria": "sergio",
-      "modelo": "modelo1",
-      "id": 11
     }
   ]
 }
