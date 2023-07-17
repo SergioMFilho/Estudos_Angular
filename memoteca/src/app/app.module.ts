@@ -25,7 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ListarPensamentoComponent,
     PensamentoComponent,
     ExcluirPensamentoComponent,
-    EditarPensamentoComponent
+    EditarPensamentoComponent,
   ],
   imports: [
     BrowserModule,
