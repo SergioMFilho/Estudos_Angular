@@ -18,8 +18,7 @@ export class PensamentoService {
     let params = new HttpParams()
       .set("_page", pagina)
       .set("_limit", itensPorPagina)
-    // GET /posts?_page=7&_limit=20
-    // return this.http.get<Pensamento[]>(`${this.API}${params}`)
+
     return this.http.get<Pensamento[]>(this.API, { params: params })
   }
 
