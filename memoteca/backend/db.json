@@ -4,81 +4,92 @@
       "conteudo": "Novo pensamento",
       "autoria": "ewdewdwedwe",
       "modelo": "modelo2",
-      "dataCriacao": "08/07/2023",
-      "id": 8
+      "id": 8,
+      "favorito": false
     },
     {
       "conteudo": "Hoje acordei com bastante disposição para estudar",
       "autoria": "Sérgio",
       "modelo": "modelo1",
-      "dataCriacao": "09/07/2023",
-      "id": 9
+      "id": 9,
+      "favorito": true
     },
     {
       "conteudo": "Teste teste",
       "autoria": "EDWDWE",
       "modelo": "modelo1",
-      "id": 10
+      "id": 10,
+      "favorito": false
     },
     {
       "conteudo": "EDWE",
       "autoria": "DWEDWEDEW",
       "modelo": "modelo1",
-      "id": 11
+      "id": 11,
+      "favorito": false
     },
     {
       "conteudo": "EWDWEDWE",
       "autoria": "DEWDWEDEWDEW",
       "modelo": "modelo1",
-      "id": 12
+      "id": 12,
+      "favorito": false
     },
     {
       "conteudo": "DEWDWEDEW",
       "autoria": "DEWDEWDEW",
       "modelo": "modelo2",
-      "id": 13
+      "id": 13,
+      "favorito": false
     },
     {
       "conteudo": "WEDWEDEWDEW",
       "autoria": "DEWDWEDEWDWE",
       "modelo": "modelo3",
-      "id": 14
+      "id": 14,
+      "favorito": false
     },
     {
       "conteudo": "DWEDWEDWED",
       "autoria": "DWEDEWDEWDEW",
       "modelo": "modelo2",
-      "id": 15
+      "id": 15,
+      "favorito": false
     },
     {
       "conteudo": "DWEDWE",
       "autoria": "DWEDWEDWE",
       "modelo": "modelo3",
-      "id": 16
+      "id": 16,
+      "favorito": false
     },
     {
       "conteudo": "é isso pessoal",
       "autoria": "LOUCO",
       "modelo": "modelo3",
-      "id": 17
+      "id": 17,
+      "favorito": false
     },
     {
       "conteudo": "SHAAAME",
       "autoria": "DOIDA",
       "modelo": "modelo2",
-      "id": 18
+      "id": 18,
+      "favorito": false
     },
     {
       "conteudo": "loucura loucura",
       "autoria": "APRESENTADOR",
       "modelo": "modelo1",
-      "id": 19
+      "id": 19,
+      "favorito": false
     },
     {
       "conteudo": "Vamos brincar",
       "autoria": "PATATI",
       "modelo": "modelo3",
-      "id": 20
+      "id": 20,
+      "favorito": false
     }
   ]
 }

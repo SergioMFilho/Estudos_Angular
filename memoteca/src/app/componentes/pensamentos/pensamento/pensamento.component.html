@@ -2,13 +2,15 @@
   <img src="/assets/imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">
   <p class="conteudo">{{ pensamento.conteudo }}</p>
   <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
-  <p class="autoria">{{ pensamento.dataCriacao }}</p>
   <div class="acoes">
+    <button class="botao-favorito" (click)="atualizarFavoritos()">
+      <img src="/assets/imagens/favorito_{{ mudarIconeFavorito() }}.png" alt="" style="width: 32px;">
+    </button>
     <button class="botao-editar" routerLink="/pensamentos/editarPensamento/{{ pensamento.id}}">
       <img src="/assets/imagens/icone-editar.png" alt="Icone de editar">
     </button>
     <button class="botao-excluir" routerLink="/pensamentos/excluirPensamento/{{ pensamento.id }}">
-      <img src="/assets/imagens/icone-excluir.png" alt="Icone de excluir">
+      <img src="/assets/imagens/icone_excluir.png" alt="Icone de excluir">
     </button>
   </div>
 </div>

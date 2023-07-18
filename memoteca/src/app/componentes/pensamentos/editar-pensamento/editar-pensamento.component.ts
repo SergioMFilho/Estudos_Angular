@@ -32,7 +32,8 @@ export class EditarPensamentoComponent implements OnInit {
         Validators.minLength(3),
         minusculoValidator
       ])],
-      modelo: ['']
+      modelo: [''],
+      favorito: []
     });
 
     const id = this.route.snapshot.paramMap.get('id');

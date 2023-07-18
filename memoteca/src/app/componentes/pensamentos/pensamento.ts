@@ -3,5 +3,5 @@ export interface Pensamento {
   conteudo: string
   autoria: string
   modelo: string
-  dataCriacao?: string | null
+  favorito: boolean
 }
