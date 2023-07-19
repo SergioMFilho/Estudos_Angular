@@ -16,6 +16,8 @@ export class PensamentoComponent {
     favorito: false
   }
 
+  @Input() listaFavoritos: Pensamento[] = []
+
   constructor(private pensamentoService: PensamentoService ) {}
 
   larguraPensamento(): string {
@@ -33,6 +35,8 @@ export class PensamentoComponent {
   }
 
   atualizarFavoritos() {
-    this.pensamentoService.mudarFavorito(this.pensamento).subscribe()
+    this.pensamentoService.mudarFavorito(this.pensamento).subscribe(() => {
+      this.listaFavoritos.splice(this.listaFavoritos.indexOf(this.pensamento), 1)
+    })
   }
 }
