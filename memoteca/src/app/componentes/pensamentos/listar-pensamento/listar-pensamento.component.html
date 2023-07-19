@@ -6,7 +6,7 @@
     </div>
     <h2 class="ff-inter">Meu Mural</h2>
     <div class="botoes">
-      <div class="botao" >Meu Mural</div>
+      <div class="botao" (click)="recarregarComponente()">{{ titulo }}</div>
       <div class="botao" (click)="carregarMeusFavoritos()">Meus Favoritos</div>
       <button routerLink="/criarPensamento" class="botao">Novo Pensamento</button>
     </div>

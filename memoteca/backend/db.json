@@ -1,95 +1,74 @@
 {
   "pensamentos": [
     {
-      "conteudo": "Novo pensamento",
-      "autoria": "ewdewdwedwe",
-      "modelo": "modelo2",
-      "id": 8,
-      "favorito": true
-    },
-    {
       "conteudo": "Hoje acordei com bastante disposição para estudar",
       "autoria": "Sérgio",
       "modelo": "modelo1",
       "id": 9,
-      "favorito": true
-    },
-    {
-      "conteudo": "Teste teste",
-      "autoria": "EDWDWE",
-      "modelo": "modelo1",
-      "id": 10,
-      "favorito": true
-    },
-    {
-      "conteudo": "EDWE",
-      "autoria": "DWEDWEDEW",
-      "modelo": "modelo1",
-      "id": 11,
       "favorito": false
     },
     {
-      "conteudo": "EWDWEDWE",
-      "autoria": "DEWDWEDEWDEW",
-      "modelo": "modelo1",
-      "id": 12,
-      "favorito": false
-    },
-    {
-      "conteudo": "DEWDWEDEW",
-      "autoria": "DEWDEWDEW",
-      "modelo": "modelo2",
-      "id": 13,
-      "favorito": false
-    },
-    {
-      "conteudo": "WEDWEDEWDEW",
-      "autoria": "DEWDWEDEWDWE",
-      "modelo": "modelo3",
-      "id": 14,
-      "favorito": false
-    },
-    {
-      "conteudo": "DWEDWEDWED",
-      "autoria": "DWEDEWDEWDEW",
-      "modelo": "modelo2",
-      "id": 15,
-      "favorito": true
-    },
-    {
-      "conteudo": "DWEDWE",
-      "autoria": "DWEDWEDWE",
-      "modelo": "modelo3",
-      "id": 16,
-      "favorito": true
-    },
-    {
-      "conteudo": "é isso pessoal",
-      "autoria": "LOUCO",
-      "modelo": "modelo3",
-      "id": 17,
-      "favorito": false
-    },
-    {
-      "conteudo": "SHAAAME",
-      "autoria": "DOIDA",
-      "modelo": "modelo2",
-      "id": 18,
-      "favorito": false
-    },
-    {
-      "conteudo": "loucura loucura",
-      "autoria": "APRESENTADOR",
-      "modelo": "modelo1",
       "id": 19,
+      "conteudo": "loucura loucura loucura",
+      "autoria": "APRESENTADOR",
+      "modelo": "modelo2",
       "favorito": false
     },
     {
-      "conteudo": "Vamos brincar",
-      "autoria": "PATATI",
-      "modelo": "modelo3",
       "id": 20,
+      "conteudo": "Vamos brincar",
+      "autoria": "PATATA",
+      "modelo": "modelo2",
       "favorito": false
+    },
+    {
+      "conteudo": "Tomar banho você deve",
+      "autoria": "YODA",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 22
+    },
+    {
+      "conteudo": "Você não é todo mundo",
+      "autoria": "MÃE",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 23
+    },
+    {
+      "conteudo": "Na minha máquina funciona!",
+      "autoria": "DEV",
+      "modelo": "modelo3",
+      "favorito": false,
+      "id": 24
+    },
+    {
+      "id": 25,
+      "conteudo": "Grandes poderes trazem grandes responsabilidades",
+      "autoria": "HOMEM-ARANHA",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "conteudo": "ET... Telefone... Minha casa",
+      "autoria": "E.T: O EXTRATERRESTRE",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 26
+    },
+    {
+      "conteudo": "Que a força esteja com você!",
+      "autoria": "STARWARS",
+      "modelo": "modelo3",
+      "favorito": false,
+      "id": 27
+    },
+    {
+      "conteudo": "teste",
+      "autoria": "TESTE",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 28
     }
   ]
 }
