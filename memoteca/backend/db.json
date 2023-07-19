@@ -5,14 +5,14 @@
       "autoria": "ewdewdwedwe",
       "modelo": "modelo2",
       "id": 8,
-      "favorito": false
+      "favorito": true
     },
     {
       "conteudo": "Hoje acordei com bastante disposição para estudar",
       "autoria": "Sérgio",
       "modelo": "modelo1",
       "id": 9,
-      "favorito": true
+      "favorito": false
     },
     {
       "conteudo": "Teste teste",

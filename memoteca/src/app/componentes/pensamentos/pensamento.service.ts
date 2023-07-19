@@ -19,34 +19,50 @@ export class PensamentoService {
       .set("_page", pagina)
       .set("_limit", itensPorPagina)
 
-    if(filtro.length > 2) {
+    if (filtro.trim().length > 2) {
       params = params.set("q", filtro)
     }
 
     return this.http.get<Pensamento[]>(this.API, { params: params })
   }
 
-  criar(pensamento : Pensamento) : Observable<Pensamento> {
+  listarPensamentosFavoritos(pagina: number, filtro: string): Observable<Pensamento[]> {
+    const itensPorPagina = 6;
+
+    let params = new HttpParams()
+      .set("_page", pagina)
+      .set("_limit", itensPorPagina)
+      .set('favorito', true)
+
+    if (filtro.trim().length > 2) {
+      params = params.set("q", filtro)
+    }
+
+    return this.http.get<Pensamento[]>(this.API, { params: params })
+
+  }
+
+  criar(pensamento: Pensamento): Observable<Pensamento> {
     return this.http.post<Pensamento>(this.API, pensamento)
   }
 
-  mudarFavorito(pensamento: Pensamento): Observable<Pensamento>  {
+  mudarFavorito(pensamento: Pensamento): Observable<Pensamento> {
     pensamento.favorito = !pensamento.favorito;
     return this.editar(pensamento)
   }
 
-  excluir(id : number) : Observable<Pensamento> {
+  excluir(id: number): Observable<Pensamento> {
     const url = `${this.API}/${id}`
     return this.http.delete<Pensamento>(url)
   }
 
-  buscarPorId(id : number) : Observable<Pensamento> {
+  buscarPorId(id: number): Observable<Pensamento> {
     const url = `${this.API}/${id}`
     return this.http.get<Pensamento>(url)
   }
 
   editar(pensamento: Pensamento): Observable<Pensamento> {
     const url = `${this.API}/${pensamento.id}`
-    return this.http.put<Pensamento>(url , pensamento)
+    return this.http.put<Pensamento>(url, pensamento)
   }
 }
