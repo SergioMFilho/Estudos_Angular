@@ -4,9 +4,9 @@
       <input type="search" class="filtro" placeholder="O que você procura?" autofocus [(ngModel)]="filtro" (keyup)="pesquisarPensamentos()">
       <img class="lupa" src="/assets/imagens/lupa.png" alt="lupa azul">
     </div>
-    <h2 class="ff-inter">Meu Mural</h2>
+    <h2 class="ff-inter">{{ titulo }}</h2>
     <div class="botoes">
-      <div class="botao" (click)="recarregarComponente()">{{ titulo }}</div>
+      <div class="botao" (click)="recarregarComponente()">Meu Mural</div>
       <div class="botao" (click)="carregarMeusFavoritos()">Meus Favoritos</div>
       <button routerLink="/criarPensamento" class="botao">Novo Pensamento</button>
     </div>
