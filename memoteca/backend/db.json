@@ -12,14 +12,14 @@
       "autoria": "Sérgio",
       "modelo": "modelo1",
       "id": 9,
-      "favorito": false
+      "favorito": true
     },
     {
       "conteudo": "Teste teste",
       "autoria": "EDWDWE",
       "modelo": "modelo1",
       "id": 10,
-      "favorito": false
+      "favorito": true
     },
     {
       "conteudo": "EDWE",
@@ -54,14 +54,14 @@
       "autoria": "DWEDEWDEWDEW",
       "modelo": "modelo2",
       "id": 15,
-      "favorito": false
+      "favorito": true
     },
     {
       "conteudo": "DWEDWE",
       "autoria": "DWEDWEDWE",
       "modelo": "modelo3",
       "id": 16,
-      "favorito": false
+      "favorito": true
     },
     {
       "conteudo": "é isso pessoal",
@@ -75,7 +75,7 @@
       "autoria": "DOIDA",
       "modelo": "modelo2",
       "id": 18,
-      "favorito": false
+      "favorito": true
     },
     {
       "conteudo": "loucura loucura",
