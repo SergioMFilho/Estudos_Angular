@@ -1,7 +1,7 @@
 import { FormControl } from '@angular/forms';
 import { ImageLinks, Item } from './../../models/interface';
 import { Component } from '@angular/core';
-import { debounceTime, distinctUntilChanged, filter, map, pipe, switchMap, tap} from 'rxjs';
+import { EMPTY, catchError, debounceTime, distinctUntilChanged, filter, map, pipe, switchMap, tap, throwError} from 'rxjs';
 import { LivroVolumeInfo } from 'src/app/models/livroVolumeInfo';
 import { LivroService } from 'src/app/service/livro.service';
 
@@ -12,6 +12,7 @@ import { LivroService } from 'src/app/service/livro.service';
 })
 export class ListaLivrosComponent {
   campoBusca = new FormControl()
+  mensagemErro = '';
 
   constructor(private service: LivroService) { }
 
@@ -24,7 +25,13 @@ export class ListaLivrosComponent {
       tap((result) => {
         console.log(result)
       }),
-      map((items) => this.livrosResultadoParaLivros(items))
+      map((items) => this.livrosResultadoParaLivros(items)),
+      catchError(() => {
+        this.mensagemErro = 'Ops, ocorreu um erro. Recarregue a aplicação!'
+        return EMPTY
+        // console.log(erro)
+        // return throwError(() => new Error(this.mensagemErro = 'Ops, ocorreu um erro. Recarregue a aplicação'))
+      })
     )
 
   livrosResultadoParaLivros(items: Item[]) : LivroVolumeInfo[] {
@@ -35,5 +42,13 @@ export class ListaLivrosComponent {
 
 }
 
+// Comentários sobre o código
+
+// distinctUntilChanged = se o resultado da requisição for igual, não pesquisa novamente
+// switchMap = só mostra a última requisição e cancela as demais
+// Caso não queira fazer nada com o erro
+// catchError = recebe o erro
+// EMPTY = usado como callback do catchError caso eu não queria fazer nada com o erro
+// throwError = 'joga' o erro / 'estoura' o erro
 
 
