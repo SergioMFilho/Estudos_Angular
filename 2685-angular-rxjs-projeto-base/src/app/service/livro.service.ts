@@ -17,7 +17,7 @@ export class LivroService {
     const params = new HttpParams().append('q', valorDigitado)
     return this.http.get<LivrosResultado>(this.API, { params }).pipe(
       map(resultado => resultado.items),
-      tap(retornoAPI => console.log('fluxo do tap ', retornoAPI)),
+      // tap(retornoAPI => console.log('fluxo do tap ', retornoAPI)),
     )
   }
 }
