@@ -5,23 +5,26 @@
     <h3 class="principal__subtitulo">Dados pessoais</h3>
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="nome">Nome Completo</label>
-      <input name="nome" id="nome" class="campo__escrita" ngModel required minlength="2">
-      <div *ngIf="(f.controls['nome']?.invalid && f.controls['nome']?.touched) || f.controls['nome']?.dirty">
-        <span class="erro__texto" *ngIf="f.controls['nome']?.errors?.['required']">O campo nome deve ser preenchido.</span>
-        <span class="erro__texto" *ngIf="f.controls['nome']?.errors?.['minlength']">O nome precisa ter, pelo menos, 2 caracteres para ser válido.</span>
+      <input name="nome" id="nome" class="campo__escrita" ngModel required minlength="2" #nome="ngModel">
+      <div *ngIf="(nome?.invalid && nome?.touched) || nome?.dirty">
+        <app-mensagem *ngIf="nome?.errors?.['required']" mensagem="O campo nome deve ser preenchido."></app-mensagem>
+        <app-mensagem *ngIf="nome?.errors?.['minlength']" mensagem="O nome precisa ter, pelo menos, 2 caracteres para ser válido."></app-mensagem>
       </div>
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="nascimento">Nascimento</label>
-        <input name="nascimento" id="nascimento" type="date" class="campo__escrita" ngModel/>
+        <input name="nascimento" id="nascimento" type="date" class="campo__escrita" ngModel #nascimento="ngModel"/>
+        <div *ngIf="(nascimento?.invalid && nascimento?.touched) || nascimento?.dirty">
+          <app-mensagem *ngIf="nascimento.errors?.['required']" mensagem="O campo nascimento deve ser preenchido."></app-mensagem>
+        </div>
       </div>
       <div class="formulario__campo">
         <label class="campo__etiqueta" for="telefone">Contato</label>
-        <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita" ngModel pattern="(\(?\d{2}\)?\s?)(\d{5}\-?\d{4})" required/>
-        <div *ngIf="(f.controls['telefone']?.invalid && f.controls['telefone']?.touched) || f.controls['telefone']?.dirty">
-          <span class="erro__texto" *ngIf="f.controls['telefone']?.errors?.['required']">O campo telefone deve ser preenchido.</span>
-          <span class="erro__texto" *ngIf="f.controls['telefone']?.errors?.['pattern']">O campo telefone deve seguir o padrão: "84 999998746".</span>
+        <input name="telefone" id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita" ngModel #telefone="ngModel" pattern="(\(?\d{2}\)?\s?)(\d{5}\-?\d{4})" required/>
+        <div *ngIf="(telefone?.invalid && telefone?.touched) || telefone?.dirty">
+          <app-mensagem *ngIf="telefone.errors?.['required']" mensagem="O campo telefone deve ser preenchido."></app-mensagem>
+          <app-mensagem *ngIf="telefone.errors?.['pattern']" mensagem="O campo telefone deve seguir o padrão: 84 998968746."></app-mensagem>
         </div>
       </div>
     </div>
