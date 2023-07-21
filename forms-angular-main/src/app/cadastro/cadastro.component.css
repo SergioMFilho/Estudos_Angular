@@ -77,6 +77,6 @@
 }
 
 .ng-touched.ng-invalid:not(form){
-  color: red;
+  /* color: red; */
   border: 1px solid red;
 }
