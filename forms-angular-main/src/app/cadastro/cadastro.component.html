@@ -42,16 +42,16 @@
 
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="cep">CEP</label>
-      <input name="cep" id="cep" class="campo__escrita" ngModel #endereco="ngModel" required pattern="^(\d{5})(-?\d{3})$" minlength="8" maxlength="9"/>
-      <div *ngIf="(endereco?.invalid && endereco?.touched) || endereco?.dirty ">
-        <app-mensagem *ngIf="endereco?.errors?.['required']" mensagem="O campo cep é obrigatório."></app-mensagem>
-        <app-mensagem *ngIf="endereco?.errors?.['pattern']" mensagem="O cep deve conter somente números ."></app-mensagem>
+      <input name="cep" id="cep" class="campo__escrita" ngModel #cep="ngModel" required pattern="^(\d{5})(-?\d{3})$" minlength="8" maxlength="9" (blur)="consultaCEP($event)"/>
+      <div *ngIf="(cep?.invalid && cep?.touched) || cep?.dirty ">
+        <app-mensagem *ngIf="cep?.errors?.['required']" mensagem="O campo cep é obrigatório."></app-mensagem>
+        <app-mensagem *ngIf="cep?.errors?.['pattern']" mensagem="O cep deve conter somente números ."></app-mensagem>
       </div>
     </div>
 
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="endereco">Endereço</label>
-      <input name="endereco" id="endereco" class="campo__escrita" />
+      <input name="endereco" id="endereco" class="campo__escrita"/>
     </div>
     <div class="formulario__dupla">
       <div class="formulario__campo">
