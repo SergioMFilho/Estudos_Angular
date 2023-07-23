@@ -10,6 +10,7 @@ import { ListaDeCompraService } from './service/lista-de-compra.service';
 export class AppComponent implements OnInit{
   title = 'app-lista-de-compras';
   listaDeCompra : Array<Item> = []
+  itemParaSerEditado! : Item;
 
   constructor(private servicoListaCompra: ListaDeCompraService) { }
 
@@ -18,4 +19,7 @@ export class AppComponent implements OnInit{
     console.log(this.listaDeCompra)
   }
 
+  editarItem(item: Item) {
+    this.itemParaSerEditado = item
+  }
 }

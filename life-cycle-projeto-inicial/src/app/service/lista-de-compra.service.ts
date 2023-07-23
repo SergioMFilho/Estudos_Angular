@@ -1,4 +1,4 @@
-import { Item } from 'src/app/interfaces/iItem';
+import { Item } from './../interfaces/iItem';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -31,7 +31,24 @@ export class ListaDeCompraService {
     console.log('Instanciando dependências necessárias para o serviço.');
   }
 
-  getListaDeCompra(){
+  getListaDeCompra() {
     return this.listaDeCompra;
   }
+
+  criarNovoItem(NomeItem: string) {
+    const id = this.listaDeCompra.length + 1;
+    const item: Item = {
+      id: id,
+      nome: NomeItem,
+      data: new Date().toLocaleString('pt-br'),
+      comprado: false
+    }
+    return item
+  }
+
+  adicionarItemNaLista(nomeDoItem: string) {
+    const item = this.criarNovoItem(nomeDoItem)
+    this.listaDeCompra.push(item)
+  }
+
 }
