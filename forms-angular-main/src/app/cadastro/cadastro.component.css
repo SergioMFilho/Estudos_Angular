@@ -34,7 +34,7 @@
 }
 
 .formulario__campo {
-  margin: .6em 3em .6em 0;
+  margin: .8em 3em .6em 0;
 
 }
 
@@ -70,7 +70,13 @@
 }
 
 .erro__texto {
+  position: absolute;
   font-size: 12px;
   line-height: 18px;
   color: var(--vermelho);
+}
+
+.ng-touched.ng-invalid:not(form){
+  /* color: red; */
+  border: 1px solid red;
 }
