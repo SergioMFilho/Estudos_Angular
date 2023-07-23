@@ -10,6 +10,8 @@ import { CepService } from '../service/cep.service';
 })
 export class CadastroComponent implements OnInit {
 
+  dadosCep: any = {}
+
   constructor(
     private router: Router,
     private cepService: CepService
@@ -29,7 +31,15 @@ export class CadastroComponent implements OnInit {
 
   consultaCEP(ev: any) {
     const cep = ev.target.value;
-    console.log(cep)
-    this.cepService.getConsultaCep(cep).subscribe(resultado => console.log(resultado))
+    return this.cepService.getConsultaCep(cep).subscribe(resultado => {
+      this.dadosCep = resultado;
+    })
+  }
+
+  preencherCamposEndereco(form:NgForm) {
+    form.controls['endereco'].setValue(this.dadosCep.logradouro);
+    form.controls['bairro'].setValue(this.dadosCep.bairro);
+    form.controls['cidade'].setValue(this.dadosCep.localidade);
+    form.controls['estado'].setValue(this.dadosCep.uf);
   }
 }
