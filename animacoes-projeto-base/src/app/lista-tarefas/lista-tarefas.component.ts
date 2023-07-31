@@ -1,3 +1,4 @@
+import { trigger, state, style } from '@angular/animations'
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -8,13 +9,22 @@ import { Tarefa } from '../interface/tarefa';
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
-  styleUrls: ['./lista-tarefas.component.css']
+  styleUrls: ['./lista-tarefas.component.css'],
+  animations: [trigger('highlightedState', [
+    state('default', style({
+      border: '2px solid #B2B6FF'
+    })),
+    state('highlighted', style({
+      border: '4px solid #B2B6FF'
+    }))
+  ])]   // o primeiro param é o nome, o segundo um array de metadados
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
   formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
+  indexTarefa = -1;     // Não quero que o primeiro item fique destacado
 
   formulario: FormGroup = this.fomBuilder.group({
     id: [0],
