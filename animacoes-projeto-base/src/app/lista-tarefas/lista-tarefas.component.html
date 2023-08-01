@@ -4,7 +4,7 @@
       Criar nova tarefa
     </button>
   </div>
-  <form class="formulario ff-prompt"
+  <form  class="formulario ff-prompt" [@showState]="formAberto ? 'show' : 'void'"
     [formGroup]="formulario"
     *ngIf="formAberto">
     <label for="descricao">Descrição da tarefa</label>
@@ -73,7 +73,7 @@
       class="lista-tarefas card-{{ tarefa.categoria }}"
       *ngFor="let tarefa of listaTarefas; let i = index"
       (mouseover)="indexTarefa = i"
-      [@highlightedState]="'default'"
+      [@highlightedState]="indexTarefa === i ? 'highlighted' : 'default'"
       >
       <div class="info-card">
         <p class="categoria-tarefa categoria-{{ tarefa.categoria }}">
