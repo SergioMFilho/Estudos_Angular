@@ -19,16 +19,28 @@ export const showStateTrigger = trigger('showState', [
       style({
         opacity: 0
       }),
-      animate(300, style({
+      animate(500, style({
         opacity: 1
       }))
     ]),
-    transition(':leave', animate(300, style({    // elemento sai do DOM  ===  * => void
+    transition(':leave', animate(10, style({    // elemento sai do DOM  ===  * => void
       opacity: 0
     })))
   ]);
 
-
+export const showIllustrationTrigger = trigger('showIllustration', [
+    transition(':enter', [      // elemento aparece no DOM  ===  void => *
+      style({
+        opacity: 0
+      }),
+      animate(600, style({
+        opacity: 1
+      }))
+    ]),
+    transition(':leave', animate(10, style({    // elemento sai do DOM  ===  * => void
+      opacity: 0
+    })))
+  ]);
 
 //   export const highlightedStateTrigger = trigger('highlightedState', [
 //     state('default', style({

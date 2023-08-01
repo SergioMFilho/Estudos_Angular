@@ -5,13 +5,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
-import { highlightedStateTrigger, showStateTrigger } from '../animations';
+import { highlightedStateTrigger, showIllustrationTrigger, showStateTrigger } from '../animations';
 
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css'],
-  animations: [highlightedStateTrigger, showStateTrigger]   // o primeiro param é o nome, o segundo um array de metadados
+  animations: [highlightedStateTrigger, showStateTrigger, showIllustrationTrigger]   // o primeiro param é o nome, o segundo um array de metadados
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
