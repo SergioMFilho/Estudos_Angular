@@ -4,24 +4,37 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
+<<<<<<< HEAD:2806-animacoes-aula-5/src/app/lista-tarefas/lista-tarefas.component.ts
 import { checkButtonTrigger, highlightedStateTrigger, shownStateTrigger } from '../animations';
+=======
+import { checkButtonTrigger, highlightedStateTrigger, showIllustrationTrigger, showStateTrigger } from '../animations';
+>>>>>>> f7c1c25b5bdb4386a152b9c91ae020736e92461b:animacoes-projeto-base/src/app/lista-tarefas/lista-tarefas.component.ts
 
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
+<<<<<<< HEAD:2806-animacoes-aula-5/src/app/lista-tarefas/lista-tarefas.component.ts
   styleUrls: ['./lista-tarefas.component.css'],
   animations: [
     highlightedStateTrigger,
     shownStateTrigger,
     checkButtonTrigger
   ]
+=======
+  styleUrls: ['./lista-tarefas.component.scss'],
+  animations: [highlightedStateTrigger, showStateTrigger, showIllustrationTrigger, checkButtonTrigger]   // o primeiro param é o nome, o segundo um array de metadados
+>>>>>>> f7c1c25b5bdb4386a152b9c91ae020736e92461b:animacoes-projeto-base/src/app/lista-tarefas/lista-tarefas.component.ts
 })
 export class ListaTarefasComponent implements OnInit {
   listaTarefas: Tarefa[] = [];
   formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
+<<<<<<< HEAD:2806-animacoes-aula-5/src/app/lista-tarefas/lista-tarefas.component.ts
   indexTarefa: number = -1;
+=======
+  indexTarefa = -1;     // Não quero que o primeiro item fique destacado
+>>>>>>> f7c1c25b5bdb4386a152b9c91ae020736e92461b:animacoes-projeto-base/src/app/lista-tarefas/lista-tarefas.component.ts
   id: number = 0;
 
   formulario: FormGroup = this.fomBuilder.group({
@@ -115,7 +128,11 @@ export class ListaTarefasComponent implements OnInit {
   }
 
   finalizarTarefa(id: number) {
+<<<<<<< HEAD:2806-animacoes-aula-5/src/app/lista-tarefas/lista-tarefas.component.ts
     this.id = id
+=======
+    this.id = id;
+>>>>>>> f7c1c25b5bdb4386a152b9c91ae020736e92461b:animacoes-projeto-base/src/app/lista-tarefas/lista-tarefas.component.ts
     this.service.buscarPorId(id!).subscribe((tarefa) => {
       this.service.atualizarStatusTarefa(tarefa).subscribe(() => {
         this.listarAposCheck();

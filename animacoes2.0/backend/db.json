@@ -4,7 +4,7 @@
       "id": 1,
       "descricao": "Ir ao supermercado",
       "categoria": "Casa",
-      "statusFinalizado": true,
+      "statusFinalizado": false,
       "prioridade": "Baixa"
     },
     {
@@ -17,8 +17,13 @@
     {
       "id": 4,
       "descricao": "Preencher formulário de inscrição",
+<<<<<<< HEAD:animacoes2.0/backend/db.json
       "categoria": "Trabalho",
       "statusFinalizado": true,
+=======
+      "categoria": "Estudos",
+      "statusFinalizado": false,
+>>>>>>> f7c1c25b5bdb4386a152b9c91ae020736e92461b:animacoes-projeto-base/backend/db.json
       "prioridade": "Normal"
     },
     {
@@ -31,6 +36,7 @@
     {
       "id": 6,
       "descricao": "Ler",
+<<<<<<< HEAD:animacoes2.0/backend/db.json
       "categoria": "Estudos",
       "statusFinalizado": false,
       "prioridade": "Normal"
@@ -52,6 +58,8 @@
     {
       "id": 9,
       "descricao": "Fazer curso de animações",
+=======
+>>>>>>> f7c1c25b5bdb4386a152b9c91ae020736e92461b:animacoes-projeto-base/backend/db.json
       "statusFinalizado": true,
       "categoria": "Estudos",
       "prioridade": "Alta"
