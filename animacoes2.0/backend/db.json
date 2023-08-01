@@ -18,11 +18,7 @@
       "id": 4,
       "descricao": "Preencher formulário de inscrição",
       "categoria": "Trabalho",
-<<<<<<< HEAD
       "statusFinalizado": false,
-=======
-      "statusFinalizado": true,
->>>>>>> df6cabcd6fae1d2c7cfc4d0289feeafda00bd83b
       "prioridade": "Normal"
     },
     {

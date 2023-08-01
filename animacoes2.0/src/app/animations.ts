@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 
 export const highlightedStateTrigger = trigger('highlightedState', [
   state('default', style({
@@ -29,11 +29,38 @@ export const shownStateTrigger = trigger('shownState', [
   ])
 ])
 
-
 export const checkButtonTrigger = trigger('checkButton', [
   transition('* => checked', [
     animate('400ms ease-in', style({
       transform: 'scale(0.4)'
     }))
+  ])
+])
+
+export const filterTrigger = trigger('filterAnimation', [
+  transition(':enter', [
+    style({ opacity: 0, width: 0 }),
+    animate('700ms ease-out', keyframes([
+      style({
+        offset: 0,
+        opacity: 0,
+        width: 0
+      }),
+      style({
+        offset: 0.8,
+        opacity: 0.5,
+        width: '*',
+        backgroundColor: 'lightgreen'
+      }),
+      style({
+        offset: 1,
+        opacity: 1,
+        width: '*',
+        backgroundColor: 'lightgreen'
+      })
+    ]))
+  ]),
+  transition(':leave', [
+    animate('200ms ease-out', style({ opacity:0, width: 0 }))
   ])
 ])
