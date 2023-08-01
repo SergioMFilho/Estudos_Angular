@@ -42,18 +42,24 @@ export const showIllustrationTrigger = trigger('showIllustration', [
     })))
   ]);
 
-//   export const highlightedStateTrigger = trigger('highlightedState', [
-//     state('default', style({
-//       border: '2px solid #B2B6FF'
-//     })),
-//     state('highlighted', style({
-//       border: '4px solid #B2B6FF',
-//       filter: 'brightness(92%)'
-//     })),
-//     transition('default => highlighted', [
-//       animate('200ms ease-out', style({
-//         transform: 'scale(1.02)'
-//       })),
-//       animate(200)
-//     ])
-//   ])
+export const checkButtonTrigger = trigger('checkButton', [
+    transition('* => checked', [
+        animate('400ms 200ms ease-in', style({
+            transform: 'scale(0.4)'
+        })),
+    ]),
+]);
+
+// export const highlightedStateTrigger = trigger('highlightedState', [
+//   state('default', style({
+//       border: '2px solid #B2B6FF',
+//       transform: 'scale(1)'
+//   })),
+//   state('highlighted', style({
+//       border: '2px solid blue',
+//       filter: 'brightness(97%)',
+//       transform: 'scale(1.04)'
+//   })),
+//   transition('* => highlighted', animate('200ms ease-in')),
+//   transition('highlighted => *', animate('200ms ease-out'))
+// ]);
